@@ -4,18 +4,28 @@
     "slug": "ride-share",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/splash.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#2f80ed"
+    },
+    
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true
     },
+
+    
     "android": {
+      "permissions": ["android.permission.INTERNET"],
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.anonymous.rideshare"
     },
     "web": {
       "bundler": "metro",
