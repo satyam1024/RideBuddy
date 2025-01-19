@@ -1,50 +1,97 @@
-# Welcome to your Expo app 👋
+# Ride Sharing App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Welcome to the Ride Sharing App! This mobile application is designed to connect riders with drivers seamlessly, making commuting easier, faster, and more efficient. Built using **React Native** and styled with **NativeWind**, the app leverages modern technology to provide a reliable and user-friendly experience for both passengers and drivers.
 
-## Get started
+## Features
 
-1. Install dependencies
+### For Riders
+- **Quick Ride Booking**: Request a ride in just a few taps.
+- **Real-Time Tracking**: Track your driver’s location in real time.
+- **Fare Estimation**: Get an estimate of your ride cost before booking.
+- **Ride History**: View your previous rides and receipts.
 
+### For Drivers
+- **Ride Requests**: Accept or decline ride requests with ease.
+- **Navigation Assistance**: Built-in maps and directions for efficient routing.
+- **Earnings Dashboard**: Monitor your earnings and completed rides.
+
+## Technology Stack
+
+- **Frontend**: React Native
+- **Styling**: NativeWind (Tailwind CSS for React Native)
+- **Backend**: Node.js with Express.js
+- **Database**: Supabase
+- **Real-Time Updates**: Supabase
+
+## Getting Started
+
+### Prerequisites
+Ensure you have the following installed:
+- Node.js
+- React Native CLI or Expo CLI
+- Supabase
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/ride-sharing-app.git
+   cd ride-sharing-app
+   ```
+2. Install dependencies:
    ```bash
    npm install
    ```
-
-2. Start the app
-
+3. Set up your environment variables in a `.env` file:
+   ```env
+   MONGO_URI=your_mongodb_connection_string
+   API_KEY=your_api_key
+   ```
+4. Start the development server:
    ```bash
-    npx expo start
+   npm run start
    ```
 
-In the output, you'll find options to open the app in a
+## Screenshots
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### Rider Interface
+![Rider Finding Screen]("DemoImage/find ride.jpg")
+![Rider Publish Screen]("DemoImage/publish ride.jpg")
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### Driver Interface
+![Driver Dashboard](image/driver_dashboard.png)
+![Driver Navigation](image/driver_navigation.png)
 
-## Get a fresh project
+## Contributing
 
-When you're ready, run:
+Contributions are welcome! If you’d like to contribute:
+1. Fork the repository.
+2. Create a new branch for your feature:
+   ```bash
+   git checkout -b feature-name
+   ```
+3. Commit your changes:
+   ```bash
+   git commit -m "Add feature description"
+   ```
+4. Push to the branch:
+   ```bash
+   git push origin feature-name
+   ```
+5. Open a pull request.
 
-```bash
-npm run reset-project
-```
+## License
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## Learn more
+## Contact
 
-To learn more about developing your project with Expo, look at the following resources:
+If you have any questions, feel free to reach out:
+- **Name**: Satyam Kathait
+- **Email**: [your-email@example.com](mailto:your-email@example.com)
+- **LinkedIn**: [Your LinkedIn Profile](https://www.linkedin.com/in/yourprofile)
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+---
 
-## Join the community
+Thank you for checking out the Ride Sharing App! We hope it simplifies your travel experience.
 
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
