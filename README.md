@@ -54,13 +54,22 @@ Ensure you have the following installed:
 
 ## Screenshots
 
-### Rider Interface
-![Rider Finding Screen]("DemoImage/find ride.jpg")
-![Rider Publish Screen]("DemoImage/publish ride.jpg")
+| **Sign In Interface**  |
+|:-----------------------:|
+| ![Sign In](DemoImages/sign%20in.jpg) |
 
-### Driver Interface
-![Driver Dashboard](image/driver_dashboard.png)
-![Driver Navigation](image/driver_navigation.png)
+| **Find Ride Interface** | **Publish Ride Interface** |
+|:------------------------:|:---------------------------:|
+| ![Find Ride](DemoImages/find%20ride.jpg) | ![Publish Ride](DemoImages/publish%20ride.jpg) |
+
+| **Ride Request Interface** | **Ride Screen** | **Published Ride Card** |
+|:---------------------------:|:---------------:|:-----------------------:|
+| ![Ride Request](DemoImages/ride%20request.jpg) | ![Ride Screen](DemoImages/ride.jpg) | ![Published Ride](DemoImages/published%20ride.jpg) |
+
+| **Inbox** | **Empty Inbox** | **Chat** |
+|:---------:|:---------------:|:-------:|
+| ![Inbox](DemoImages/inbox.jpg) | ![Empty Inbox](DemoImages/empty%20inbox.jpg) | ![Chat](DemoImages/chat.jpg) |
+
 
 ## Contributing
 
