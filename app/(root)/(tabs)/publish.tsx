@@ -116,7 +116,7 @@ const Publish = () => {
   };
 
   return (
-    <SafeAreaView className="flex-1 bg-general-500 justify-center px-5 py-10">
+    <SafeAreaView className="flex bg-general-500 justify-center px-5 py-10">
      
       <View className="bg-white rounded-xl shadow-lg p-6">
         {/* From Field */}

@@ -14,7 +14,7 @@ const FindRide = () => {
   const {
     userAddress,
     destinationAddress,
-    seat,
+    seat,date,
     setDestinationLocation,
     setUserLocation,
   } = useLocationStore();
@@ -25,15 +25,21 @@ const FindRide = () => {
   const [error, setError] = useState<string | null>(null);
   const setSeat = useSeatStore((state) => state.setSeat);
 
-  // Ensure all hooks are called at the top level
+  const filterRidesByDate = (rides: any[], date: string) => {
+    const targetDate = new Date(date);
+    return rides.filter((ride) => {
+      const rideDate = new Date(ride.ride_date); 
+      return rideDate >= targetDate;
+    });
+  };
   useEffect(() => {
-    if (userAddress && destinationAddress && seat) {
+    if (userAddress && destinationAddress && seat && date) {
       setSeat(seat);
       const fetchRidesData = async () => {
         try {
           const fetchedRides = await fetchRides(userAddress, destinationAddress, seat);
-          
-          setRides(fetchedRides);
+          const filterRides = filterRidesByDate(fetchedRides,date);
+          setRides(filterRides);
         } catch (err) {
           setError("Failed to load rides");
         } finally {

@@ -14,15 +14,16 @@ import RideCard from "@/components/RideCard";
 import { icons, images } from "@/constant";
 import { useFetch } from "@/lib/fetch";
 import { useLocationStore } from "@/store";
-import { Ride } from "@/types/type";
+import { Ride, User } from "@/types/type";
 import React from "react";
+import { fetchUsers } from "@/lib/db";
 
 
 
 
 const Home = () => {
   const { user } = useUser();
-  
+  const[userDetails,setUserDetails]=useState<User>();
   const { signOut } = useAuth();
 
 
@@ -35,10 +36,23 @@ const Home = () => {
 const [isDatePickerVisible, setDatePickerVisibility] = useState(false);
   const [datee, setLocalDate] = useState(new Date());
   const [seats, setSeats] = useState(1);
+  const [wanted,setWanted]=useState(false);
 
     const hideDatePicker = () => {
       setDatePickerVisibility(false);
     };
+    useEffect(()=>{
+      
+      if(user?.id){
+        const loaduser = async()=>{
+          const userDetail = await fetchUsers(user.id);
+          setUserDetails(userDetail);
+        }
+        loaduser();
+
+      }
+
+    },[])
 
   
    const { 
@@ -56,10 +70,12 @@ const [isDatePickerVisible, setDatePickerVisibility] = useState(false);
 
 
   return (
-    <SafeAreaView className="flex-1 bg-general-500 justify-center px-5 ">
+    <SafeAreaView className="flex bg-general-500 justify-center px-5 my-10">
+
+      
       <View className="flex flex-row items-center justify-between my-5">
               <Text className="text-2xl font-JakartaExtraBold pb-6">
-                Welcome {user?.firstName}👋
+                Welcome username👋
               </Text>
               <TouchableOpacity
                 onPress={handleSignOut}

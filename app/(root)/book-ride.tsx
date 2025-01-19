@@ -165,11 +165,7 @@ const BookRide = () => {
             disabled={isAlreadyBooked} 
         />
         
-        <CustomButton
-          title="Chat"
-          onPress={() => router.push(`/chat`)}
-          className="mt-5"
-        />
+        
       </View>
       </View>
       </View>

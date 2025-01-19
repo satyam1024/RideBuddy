@@ -87,6 +87,7 @@ const SignUp = () => {
           </Text>
         </View>
         <View className="p-5">
+        
           <InputField
             label="Name"
             placeholder="Enter name"
